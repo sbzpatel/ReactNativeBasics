@@ -4,7 +4,7 @@ import externalStyle from './externalStyle'
 
 const MyView = () => {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "pink" }}>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "hotpink" }}>
       <Text style={{...externalStyle.heading, color: "#535955"}}>MyView</Text>
     </View>
   )
