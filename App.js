@@ -138,7 +138,7 @@ const App = () => {
         Welcome to React Native
       </Text> */}
 
-      <MyView /> 
+      <MyView />
 
       {/* <Images /> */}
 
