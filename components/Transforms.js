@@ -37,7 +37,7 @@ function Transforms() {
                 <Text style={styles.text}>Scale by 1.5</Text>
             </View>
 
-            <View style={[styles.box, { transform: [{ scaleX: 1.5 }] }]}>
+            <View style={[styles.box, { transform: [{ scaleX: 1.5}] }]}>
                 <Text style={styles.text}>ScaleX by 1.5</Text>
             </View>
 

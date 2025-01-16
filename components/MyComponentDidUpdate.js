@@ -18,7 +18,9 @@ export class MyComponentDidUpdate extends Component {
     }
 
     componentDidUpdate() {
-        ToastAndroid.show("state name changed after 3 second of mounting.", ToastAndroid.SHORT);
+        console.log("componentDidUpdate calling...");
+
+        ToastAndroid.show("state name changed after 3 seconds of mounting.", ToastAndroid.SHORT);
     }
 
     render() {

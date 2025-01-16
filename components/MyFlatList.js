@@ -17,6 +17,7 @@ function MyFlatList() {
     return (
         <View>
             <Text style={externalStyle.heading}>My Friend's List</Text>
+            
             <FlatList
                 data={friends}
                 renderItem={({ item }) => {
@@ -25,8 +26,7 @@ function MyFlatList() {
                             <Text style={styles.text}>{item.name}</Text>
                         </View>
                     )
-                }
-                }
+                }}
             />
 
             {/* {

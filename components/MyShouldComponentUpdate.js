@@ -20,6 +20,7 @@ export class MyShouldComponentUpdate extends Component {
         }
 
         // return true;
+        // return false;
     }
 
     handleCountInc = () => {

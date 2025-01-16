@@ -4,7 +4,7 @@ import externalStyle from "./externalStyle"
 
 class MyComponentDidMount extends Component {
     constructor(props) {
-        console.log("constructor calling...")
+        console.log("constructor calling...(MyComponentDidMount)")
         super(props);
 
         this.state = {
@@ -13,13 +13,15 @@ class MyComponentDidMount extends Component {
     }
 
     componentDidMount() {
-        console.log("componentDidMount calling...");
+        console.log("componentDidMount calling...(MyComponentDidMount)");
+        
         setTimeout(() => {
             this.setState({ name: "Shahbaz Patel" })
         }, 1000)
     }
 
     render() {
+        console.log("render calling...(MyComponentDidMount)");
         return (
             <View style={externalStyle.container}>
                 <Text style={externalStyle.heading}>RN ComponentDidMount</Text>

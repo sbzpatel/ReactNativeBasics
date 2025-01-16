@@ -3,6 +3,8 @@ import { Linking, View, Text, StyleSheet, TextInput, Button, ScrollView, Activit
 import externalStyle from './externalStyle'
 
 const User = (props) => {
+    console.log(props.name, props.age);
+    
     const [name, setName] = useState(props.name);
     const [age, setAge] = useState(props.age);
 

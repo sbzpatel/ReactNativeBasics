@@ -8,18 +8,20 @@ function CustomPermissions() {
     const requestCameraPermission = async () => {
         try {
             console.log("requestCameraPermission calling...");
+
             const granted = await PermissionsAndroid.request(
                 PermissionsAndroid.PERMISSIONS.CAMERA,
                 {
                     title: 'Cool Photo App Camera Permission',
                     message:
-                        'Cool Photo App needs access to your camera ' +
+                        'App needs access to your camera ' +
                         'so you can take awesome pictures.',
                     buttonNeutral: 'Ask Me Later',
                     buttonNegative: 'Cancel',
                     buttonPositive: 'OK',
                 },
             );
+            
             if (granted === PermissionsAndroid.RESULTS.GRANTED) {
                 console.log('You can use the camera');
             } else {

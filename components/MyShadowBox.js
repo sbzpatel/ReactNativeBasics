@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     width: scale(150),
     backgroundColor: "green",
     shadowColor: "yellow",
-    shadowOpacity: 0.6,
+    shadowOpacity: 0.7,
     shadowOffset: {
       width: scale(10),
       height: scale(10)
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     fontSize: 34,
     fontWeight: 700,
     textShadowColor: "grey",
-    ShadowOpacity: 0.6,
+    shadowOpacity: 0.6,
     textShadowOffset: {
       width: 0.7,
       height: 0.7

@@ -29,7 +29,7 @@ const MyEncryptedStorage = () => {
         // const userName = await AsyncStorage.getItem("authorName");
         const data = await EncryptedStorage.getItem("authorName");
 
-        encodedData = JSON.parse(data);
+        var encodedData = JSON.parse(data);
 
         if (encodedData.name !== "" && encodedData.password !== "") {
             setSavedData({ name: encodedData.name, password: encodedData.password });

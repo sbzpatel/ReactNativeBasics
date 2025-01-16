@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import externalStyle from './externalStyle'
-import axios from 'axios';
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 
 
@@ -17,6 +16,7 @@ function MyApiCall() {
             const response = await fetch(
                 'https://reactnative.dev/movies.json',
             );
+            
             const json = await response.json();
             console.log("response: ", json.movies);
 
@@ -52,7 +52,7 @@ function MyApiCall() {
             </TouchableOpacity>
 
             <View>
-                <Text style={[externalStyle.heading, { fontSize: scale(24) }]}>API output</Text>
+                <Text style={[externalStyle.heading, { fontSize: scale(38) }]}>API Result</Text>
                 {
                     data != [] ?
                         data.map((item) => <View key={item.id}><Text style={styles.data}>{item.title}</Text></View>)

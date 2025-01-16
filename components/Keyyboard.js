@@ -35,7 +35,7 @@ const Keyyboard = () => {
         <TextInput
           style={styles.input}
           placeholder="Click here…"
-          onSubmitEditing={Keyboard.dismiss}
+          // onSubmitEditing={Keyboard.dismiss}
         />
       </View>
 

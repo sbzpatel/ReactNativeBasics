@@ -6,7 +6,7 @@ function Images() {
   return (
     <View>
       <Text style={externalStyle.heading}>RN Image</Text>
-      
+
       <Image
         style={externalStyle.tinyLogo}
         source={{ uri: "https://reactnative.dev/img/tiny_logo.png" }}

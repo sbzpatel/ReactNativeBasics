@@ -18,11 +18,19 @@ const MyUseMemo = () => {
         setItem(item + 1);
     }
 
-    const countUseMemo = useMemo(() => {
+    // const countUseMemo = useMemo(() => {
+    //     console.log("multiCountBy5 calling...");
+
+    //     return count * 5;
+    // }, [count])
+
+    
+
+    const memoMultiCountBy5 = useMemo(() => {
         console.log("multiCountBy5 calling...");
 
-        return count * 5;
-    }, [count])
+        return count*5;
+    }, [count]);
 
     return (
         <View style={externalStyle.container}>
@@ -30,7 +38,7 @@ const MyUseMemo = () => {
 
             <Text style={{ fontSize: 28, color: "violet" }}>Count: {count}</Text>
             <Text style={{ fontSize: 28, color: "violet" }}>Item: {item}</Text>
-            <Text style={{ fontSize: 28, color: "violet" }}>Count multiply by 5: {countUseMemo}</Text>
+            <Text style={{ fontSize: 28, color: "violet" }}>Count multiply by 5: {memoMultiCountBy5}</Text>
 
             <View style={{ width: "95%" }}>
                 <TouchableOpacity

@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, Image, Text } from 'react-native'
+import { StyleSheet, View, Image, Text, ScrollView } from 'react-native'
 import externalStyle from './externalStyle';
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 
@@ -8,7 +8,7 @@ function ImageStyleProps() {
     const asset = { uri: "https://reactnative.dev/img/tiny_logo.png" };
 
     return (
-        <View>
+        <ScrollView>
             <View style={[externalStyle.container, { backgroundColor: "#3f4663" }]}>
                 <Text style={{ ...externalStyle.heading, color: "#fff" }}>Image Resize Modes</Text>
             </View>
@@ -75,7 +75,7 @@ function ImageStyleProps() {
                 source={asset}
             />
             <Text style={styles.text}>borderRadius</Text>
-        </View>
+        </ScrollView>
     )
 }
 
