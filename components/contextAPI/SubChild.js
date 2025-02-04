@@ -3,9 +3,11 @@ import React, { useContext } from 'react'
 import { CounterContext } from './Parent';
 import externalStyle from '../externalStyle';
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
+import { SampleContext } from '../../App';
 
 const SubChild = () => {
   const { count, handleIncrementCount, handleDecrementCount, counterReset } = useContext(CounterContext);
+  const {helloFromApp} = useContext(SampleContext);
 
   return (
     <View>
@@ -23,6 +25,10 @@ const SubChild = () => {
 
       <TouchableOpacity onPress={counterReset}>
         <Text style={[externalStyle.customBtn, { backgroundColor: "#0d0530", color: "#deeb34" }]}>Reset Counter</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={helloFromApp}>
+        <Text style={[externalStyle.customBtn, { backgroundColor: "#0d0530", color: "#deeb34" }]}>Hello from App.js</Text>
       </TouchableOpacity>
     </View>
   )

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useMemo } from 'react'
+import React, { useEffect, useState, useCallback, useMemo, createContext } from 'react'
 import { View, Text, StyleSheet, Platform, StatusBar, ImageBackground, SafeAreaView, Modal, Button, Keyboard, PixelRatio, Alert, BackHandler, ScrollView, RefreshControl, useColorScheme } from 'react-native'
 import NetInfo from "@react-native-community/netinfo"
 import User from './components/User'
@@ -52,6 +52,8 @@ import MyRegister from './components/MyRegister'
 import MyForgotPassword from './components/MyForgotPassword'
 import MyContact from './components/MyContact'
 import MyPushNotifications from './components/MyPushNotifications'
+
+export const SampleContext = createContext();
 
 const App = () => {
   const [darktheme, setDarkTheme] = useState(false);
@@ -109,7 +111,12 @@ const App = () => {
     return () => backHandler.remove();
   }
 
+  const helloFromApp = () => {
+    console.log("Hello from App.js used by use");
+  }
+
   return (
+    <SampleContext.Provider value={{helloFromApp}} >
     <View
       // scrollEnabled={true} // false: by default its true
       style={{ flex: 1, backgroundColor: darktheme ? "#000000" : "#eeebf0" }}
@@ -184,7 +191,7 @@ const App = () => {
 
       {/* <MyForwardRef /> */}
 
-      {/* <Parent /> */}
+      <Parent />
 
       {/* <Provider store={store}>
         <ReduxCounter />
@@ -226,10 +233,11 @@ const App = () => {
 
       {/* <MyForgotPassword /> */}
 
-      {/* <MyContact /> */}
+      <MyContact />
 
       {/* <MyPushNotifications /> */}
     </View>
+    </SampleContext.Provider>
   )
 }
 
