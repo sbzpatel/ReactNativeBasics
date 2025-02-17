@@ -52,6 +52,10 @@ import MyRegister from './components/MyRegister'
 import MyForgotPassword from './components/MyForgotPassword'
 import MyContact from './components/MyContact'
 import MyPushNotifications from './components/MyPushNotifications'
+import POST_API from './components/POST_API'
+import PUT_API from './components/PUT_API'
+import PATCH_API from './components/PATCH_API'
+import DELETE_API from './components/DELETE_API'
 
 export const SampleContext = createContext();
 
@@ -185,13 +189,21 @@ const App = () => {
 
       {/* <MyAxios /> */}
 
+      {/* <POST_API /> */}
+
+      {/* <PUT_API /> */}
+
+      {/* <PATCH_API /> */}
+
+      {/* <DELETE_API /> */}
+
       {/* <MyShadowBox /> */}
 
       {/* <MyUseRef /> */}
 
       {/* <MyForwardRef /> */}
 
-      <Parent />
+      {/* <Parent /> */}
 
       {/* <Provider store={store}>
         <ReduxCounter />
@@ -233,7 +245,7 @@ const App = () => {
 
       {/* <MyForgotPassword /> */}
 
-      <MyContact />
+      {/* <MyContact /> */}
 
       {/* <MyPushNotifications /> */}
     </View>
