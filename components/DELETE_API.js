@@ -1,6 +1,6 @@
 import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import React, {useState} from 'react';
-import ExStyles from './css/ExStyles';
+import externalStyle from './externalStyle'
 import axios from 'axios';
 
 const DELETE_API = () => {
@@ -31,10 +31,10 @@ const DELETE_API = () => {
 
     return (
         <View>
-            <Text style={{ ...ExStyles.heading, marginVertical: 15 }}>DELETE API</Text>
+            <Text style={{ ...externalStyle.heading, marginVertical: 15 }}>DELETE API</Text>
 
-            <TouchableOpacity onPress={handleFormSubmit} style={{margin: 10}}>
-                <Text style={ExStyles.custombtn}>Delete Tasadduk</Text>
+            <TouchableOpacity onPress={handleFormSubmit}>
+                <Text style={externalStyle.customBtn}>Delete Tasadduk</Text>
             </TouchableOpacity>
         </View>
     )

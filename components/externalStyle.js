@@ -23,7 +23,8 @@ export default StyleSheet.create({
     textInput: {
         backgroundColor: "white",
         paddingLeft: scale(17),
-        margin: scale(10),
+        marginVertical: scale(10),
+        marginHorizontal: scale(15),
         borderRadius: scale(5),
         borderWidth: scale(2),
         fontSize: scale(18),

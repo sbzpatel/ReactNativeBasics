@@ -1,6 +1,6 @@
 import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
 import React, {useState} from 'react';
-import ExStyles from './css/ExStyles';
+import externalStyle from './externalStyle'
 import axios from 'axios';
 
 const PUT_API = () => {
@@ -43,42 +43,42 @@ const PUT_API = () => {
 
     return (
         <View>
-            <Text style={{ ...ExStyles.heading, marginVertical: 15 }}>PUT API</Text>
+            <Text style={{ ...externalStyle.heading, marginVertical: 15 }}>PUT API</Text>
 
             <TextInput
                 placeholder='Enter your name'
                 value={formData.name}
                 onChangeText={(val) => setFormData({...formData, name: val})}
-                style={ExStyles.textInput}
+                style={externalStyle.textInput}
             />
 
             <TextInput
                 placeholder='Enter your email'
                 value={formData.email}
                 onChangeText={(val) => setFormData({...formData, email: val})}
-                style={ExStyles.textInput}
+                style={externalStyle.textInput}
             />
 
             <TextInput
                 placeholder='Enter your gender'
                 value={formData.gender}
                 onChangeText={(val) => setFormData({...formData, gender: val})}
-                style={ExStyles.textInput}
+                style={externalStyle.textInput}
             />
 
             <TextInput
                 placeholder='Enter your age'
                 value={formData.age}
                 onChangeText={(val) => setFormData({...formData, age: val})}
-                style={ExStyles.textInput}
+                style={externalStyle.textInput}
             />
 
-            <TouchableOpacity onPress={handleFormSubmit} style={{margin: 10}}>
-                <Text style={ExStyles.custombtn}>Submit</Text>
+            <TouchableOpacity onPress={handleFormSubmit}>
+                <Text style={[externalStyle.customBtn, {backgroundColor: "green"}]}>Submit</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => { setFormData({name: "", email: "", gender: "", age: "", married: true}) }} style={{margin: 10}}>
-                <Text style={{...ExStyles.custombtn, backgroundColor: "red"}}>Clear Data</Text>
+            <TouchableOpacity onPress={() => { setFormData({name: "", email: "", gender: "", age: "", married: true}) }}>
+                <Text style={{...externalStyle.customBtn, backgroundColor: "red"}}>Clear Data</Text>
             </TouchableOpacity>
         </View>
     )
