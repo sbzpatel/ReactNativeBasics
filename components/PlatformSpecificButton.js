@@ -1,3 +1,6 @@
+// In React Native, the "Platform" API is allow us to detect the platform(iOS or Android) where app is running on and used to implement platform-specific code or styles.
+
+
 import React from 'react'
 import { Platform, TouchableOpacity, View, Text, ToastAndroid } from 'react-native'
 import externalStyle from './externalStyle'

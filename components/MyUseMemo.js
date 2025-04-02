@@ -1,3 +1,6 @@
+// useMemo is a React Native's performance optimization hook that helps to memoize values, which preventing large recalculations when dependencies(state or props) remain unchanged.
+
+
 import { View, Text, TouchableOpacity } from 'react-native'
 import React, { useMemo, useState } from 'react'
 import externalStyle from './externalStyle'

@@ -1,3 +1,7 @@
+// The Functional Component is a javscript function which returns the JSX to define the UI of a component.
+// Its a most reliable way to create a component. 
+
+
 import React from "react"
 import { View, Text, StyleSheet, TouchableOpacity, ToastAndroid, Button } from "react-native"
 import externalStyle from "./externalStyle"

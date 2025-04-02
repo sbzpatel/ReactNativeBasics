@@ -1,3 +1,6 @@
+// A class component is a javascript class which contain different methods(constructor(), render()) which inherits the "React.Component"(Parent class) properties and methods to create a component.
+
+
 import React, { Component } from "react"
 import { View, Text, StyleSheet, TouchableOpacity, ToastAndroid } from "react-native"
 import externalStyle from "./externalStyle"

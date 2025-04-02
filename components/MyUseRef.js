@@ -1,3 +1,10 @@
+// The useRef is a built-in React hook that returns a mutable reference object which persists across renders.
+// Unlike state variables, updating a ref does not trigger a component re-render.
+
+
+// Uncontrolled components are the components that do not rely on the React State to update the component, but are handled through DOM(Document Object Model) manipulations using React hook "useRef".  
+
+
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useRef } from 'react'
 import externalStyle from './externalStyle'

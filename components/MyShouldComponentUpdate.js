@@ -1,3 +1,6 @@
+// Generally React component re-render whenever state or props changed. but shouldComponentUpdate is React's lifecycle method used to decide whether component should re-render when its state or props changed. 
+
+
 import { Text, View, TouchableOpacity } from 'react-native'
 import React, { Component } from 'react'
 import externalStyle from './externalStyle'

@@ -1,3 +1,6 @@
+// AsyncStorage is unencrypted, asynchronous, persist & key-value storage system which is global to the whole app.
+
+
 import { View, Text, Button, TouchableOpacity, TextInput, Alert, ToastAndroid } from 'react-native'
 import React, { useState } from 'react'
 import externalStyle from './externalStyle'

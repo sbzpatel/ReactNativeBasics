@@ -1,3 +1,8 @@
+// "PermissionsAndroid" API is used to access Android M's new permission model.
+// According to this model, normal persmissions are granted by default when the application is installed as long as they appear in "AndroidManifest.xml" file.
+// However, "dangerous" permissions require a dialog prompt to get user's permission. So to call these dialog prompt in android devices we are using "PermissionsAndroid" module of React Native.
+
+
 import React from 'react'
 import { View, Text, StyleSheet, StatusBar, TouchableOpacity, PermissionsAndroid } from 'react-native'
 import externalStyle from './externalStyle';

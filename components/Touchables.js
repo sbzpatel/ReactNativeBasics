@@ -1,3 +1,11 @@
+// React Native Touchable is a component which makes component or it parts touchable.
+// On press event generation on Touchables, showing visual feedback in response like darkened background color, change the opacity.
+// There are 3 types of Touchables are as follows,
+// 1) TouchableHighlight - Its a touchable area and its background will be darkened when the user press down on this part.
+// 2) TouchableOpacity - Its a touchable area, once user press then changes the opacity of that area in its feedback.
+// 3) TouchableWithoutFeedback - Its a touchable area which don't have any responsive feedback in response of press event.
+
+
 import React from 'react'
 import { View, Text, TouchableHighlight, TouchableOpacity, Pressable, TouchableWithoutFeedback } from 'react-native'
 import externalStyle from './externalStyle';

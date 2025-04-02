@@ -1,3 +1,5 @@
+// The React Native Keyboard module is used to listen keyboard events when the component mounts. There are 2 events(keyboardDidShow, keyboardDidHide), in that response we can perform some actions.
+
 import React, { useEffect, useState } from 'react'
 import { View, Text, TextInput, StyleSheet, Keyboard, ToastAndroid } from 'react-native'
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters';

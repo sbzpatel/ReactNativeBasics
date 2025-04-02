@@ -1,3 +1,6 @@
+// Flatlist is a React Native module used to render large data lists which provide scrolling, pull-to-refresh & item selection features. 
+
+
 import React from 'react'
 import { FlatList, StyleSheet, View, Text } from 'react-native'
 import externalStyle from './externalStyle'

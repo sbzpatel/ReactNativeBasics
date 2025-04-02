@@ -1,3 +1,6 @@
+// useCallback is a React Native's performance optimization hook that helps to memoize functions, which are only re-call when it required to call.
+
+
 import { View, Text, TouchableOpacity } from 'react-native'
 import React, { useState, memo, useCallback, useMemo } from 'react'
 import externalStyle from './externalStyle';

@@ -1,3 +1,12 @@
+// Redux is a javascript library that helps to manage the application state by providing a centralized store where developers can save and modify state, which can be share across all components or screens of an app without prop drilling that improves code reliability.
+
+// Actions ->> Actions represent the events which happens in the application, there are objects which contain type property to identify the action, along with additional data to perform that action.
+
+// Reducers ->> Reducers are functions responsible for handling state transition in application by taking current state and an action type as an input, and returns the new state as an output.
+
+// Store ->> It holds the application state which is singleton object and provide methods to access these states across the components in application without prop drilling.
+
+
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'

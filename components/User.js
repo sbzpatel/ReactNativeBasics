@@ -1,3 +1,6 @@
+// Props is a special keyword in react which stands for properties that pass the data from one component to another component in a unidirectional flow(i.e. From parent to child component).
+
+
 import React, { useCallback, useState } from 'react'
 import { Linking, View, Text, StyleSheet, TextInput, Button, ScrollView, ActivityIndicator, Image, TouchableHighlight, TouchableOpacity, Pressable, Modal, RefreshControl, TouchableWithoutFeedback, Alert, Animated, useAnimatedValue, ToastAndroid } from 'react-native'
 import externalStyle from './externalStyle'

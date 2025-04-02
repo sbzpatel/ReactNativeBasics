@@ -1,3 +1,6 @@
+// In React, componentWillUnmount() is a lifecycle method called immediately before a component is unmounted and destroyed, allowing you to perform necessary cleanup tasks like canceling timers, removing event listeners, or unsubscribing from data sources.
+
+
 import { Text, ToastAndroid, View, TouchableOpacity } from 'react-native'
 import React, { Component } from 'react'
 import externalStyle from './externalStyle'

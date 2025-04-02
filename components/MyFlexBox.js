@@ -1,3 +1,8 @@
+// Grid is a set of horizontal & vertical lines that divides the screen into rows and columns to create responsive mobile app design. 
+
+// A component can specify the layout of its children using flexbox algorithm to create responsive mobile app design(there are different properties like flex, flexDirection, flexWrap & etc). 
+
+
 import React from 'react'
 import { View, Text } from 'react-native'
 import externalStyle from './externalStyle'

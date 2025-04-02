@@ -1,3 +1,6 @@
+// The useEffect hook is allow to perform side effects in functional component, like fetching data, setting up subscriptions and manipulating a DOM after component renders or re-renders.
+
+
 import { View, Text, TouchableOpacity } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import externalStyle from './externalStyle'

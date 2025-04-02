@@ -1,3 +1,6 @@
+// NativeWind allow us to use Tailwind CSS in React Native Components for styling purposes.
+
+
 import { View, Text, TextInput, TouchableOpacity, SafeAreaView } from 'react-native'
 import React, { useState } from 'react'
 

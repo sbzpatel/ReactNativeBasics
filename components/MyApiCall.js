@@ -1,3 +1,33 @@
+// The Fetch API is a modern interface in javascript that allow to make HTTP Request.
+// It replace the older XMLHTTPRequest method and provides cleaner and more flexible way to fetch resources asynchronously.
+// Here Fetch API used promise object or async-await function to work with asynchronous data handling operations.
+
+// Syntax:
+// 		fetch(url, option)
+// 			.then((result) => result.json())
+// 			.then((data) => console.log(data))
+// 			.catch((err) => console.log("Error:", err))
+			
+// 		a) url ->> The API endpoint from where data is fetched.
+// 		b) options (optional) ->> Specifies method, headers, body, etc.
+// 		c) result.json() ->> It parse the result as JSON.
+// 		d) .catch(err) ->> handles any errors occurs during the asynchronous operation at server side.
+
+// There are different type of methods as below, which performs different type of requests to perform a tasks:
+	
+// 	1) Basic Fetch (GET)Method:
+// 		Its a simple Get method used to fetch data from an API.
+		
+// 	2) POST Method:
+// 		POST Method is used to submit data with body and headers.
+		
+// 	3) PUT Method:
+// 		PUT Method is used to update the existing data by passing id refrence, body and headers.
+		
+// 	4) DELETE Method:
+// 		DELETE Method used to delete the existing data by passing id refrence to the URL.
+
+
 import React, { useEffect, useState } from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import externalStyle from './externalStyle'

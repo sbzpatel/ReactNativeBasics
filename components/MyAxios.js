@@ -1,3 +1,7 @@
+// Axios is a javascript library that allow to make HTTP request to API endpoint for access external resources from within a React Component.
+// There are some important features over fetch API Method is Automatic JSON Parsing & Error handling.
+
+
 import React, { Component } from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import externalStyle from './externalStyle'

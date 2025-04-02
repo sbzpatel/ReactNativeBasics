@@ -1,3 +1,6 @@
+// PureComponent is a base class of React Native that is used to optimize the rendering performance of a component which prevents from unnecessary re-renders when no any state or props changed.
+
+
 import { Text, View, TouchableOpacity, StyleSheet } from 'react-native'
 import React, { Component, PureComponent } from 'react'
 import externalStyle from './externalStyle'

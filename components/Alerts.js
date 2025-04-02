@@ -1,3 +1,6 @@
+// "Alert" is a React Native API that uses alert method to show the alert dialog box. This alert dialog box can have title, message & three buttons which are positive(OK), negative(Cancel), and neutral(Ask Me Later) for performing different actions on each button's press event. 
+
+
 import React from 'react'
 import { View, Text, Button, Alert, TouchableOpacity, ToastAndroid } from "react-native"
 import externalStyle from './externalStyle'

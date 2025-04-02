@@ -1,3 +1,6 @@
+// componentDidMount is a one of the lifecycle method in class component which will call once the component mount(render) first time in a component's tree.
+
+
 import React, { Component } from "react"
 import { View, Text } from "react-native"
 import externalStyle from "./externalStyle"

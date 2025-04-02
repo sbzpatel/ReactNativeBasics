@@ -1,10 +1,13 @@
+// forwardRef is a utility function that allows a parent component to access the DOM node of child component by forwarding a "ref" passed to it(Child component).
+// This is particularly useful when we need to interact with a child component's DOM element directly, such as focusing input or measuring its dimensions. 
+
+
 import { View, Text, TextInput, StyleSheet } from 'react-native'
 import React, { useRef, forwardRef } from 'react'
 import externalStyle from './externalStyle'
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters'
 
 const MyInput = (props, ref) => {
-
     return (
         <>
             <TextInput

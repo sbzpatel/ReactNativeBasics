@@ -1,3 +1,5 @@
+// Its a one of the lifecycle method of React class component which will be executes when the depenencies(state or props) changed or updated over time.
+
 import { Text, ToastAndroid, View } from 'react-native'
 import React, { Component } from 'react'
 import externalStyle from './externalStyle'

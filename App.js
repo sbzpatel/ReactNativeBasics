@@ -1,3 +1,85 @@
+// React Native is an open source React Framework to build mobile apps for android & iOS devices using its predefined core components(like Text, View, ScrollView, TextInput, Image & Button).
+
+
+// React Native latest stable version is 0.78.
+
+
+// npm stands for "Node Package Manager" is an open source and world's largest software library used to install and manage different software packages for application purposes.
+
+
+// We are using below npm command to configure/create a new React Native Application with version 0.78.
+//      ->> npx @react-native-community/cli init ReactNativeAppName
+
+
+// A React Native App Architecture contains a 3 Layers 1) Javascript Layer 2) A bridge for communication 3) Native Layer
+// Javascript Layer allow developers to write app logic & UI using Javascript as well as React Components.
+// The Bridge Layer is a communication hub between Javascript Layer & Native Layer, that allowing developers to create interaction of javascript code with native modules of underlying platform to enhance the app capabalities.
+// The Native Layer allow developers to write platform-specific code(like Swift language used to write code for iOS & Java or Kotlin is used to write code for Android devices) to add Platform Native functionalities to the React Native Application.
+
+
+// The Bridgeless architecture is a concept introduced in Hermes javascript engine which is alternative runtime for React Native Apps to reduce communication overhead between Javascript & Native Layer by optimizing the execution of javascript code on the native side.
+// This architecture improves the app startup performance and reduced memory consumption.
+
+
+// The "Metro bundler" is the default javascript bundler for React Native Projects where it is responsible for transforming, bundling and serving the javascript code to the development server or packaging it for production.
+// Metro is highly optimized for the React Native environment, providing a seamless development experience.
+// If we created a React Native project using React Native CLI, then the Metro is already included in it to use.
+
+
+// 'React Native Fabric' is an ongoing effort by the React Native community to rewrite and improve the core architecture of React Native. It aims to enhance performance, reduce memory usage, and provide better synchronization between JavaScript and Native threads.
+
+
+// Component is a reusable piece of code that define how a part of an app's user interface(UI) looks and behaves.
+// Components are the building blocks of React Native which is used to build apps and it returns JSX content.
+
+
+// JSX is a syntax extension for a javascript, which allow to write HTML or HTML-like code directly inside javascript.
+
+
+// Babel is a javascript compiler which converts modern javascript(ES6/ES7) and JSX to the older version of javascript(ES5) that will be compatible with most browsers and environment which improves code readability & compatibility.
+
+
+// The state is a built-in React object which contain data or information about the component.
+// A component's state can change over time; whenever it change, the component re-render with updated state value.
+
+
+// The Virtual DOM is an in memory representation of Real DOM, enabling efficient UI updates by minimizing direct DOM manipulations and optimizing performance.
+// When component's state changed, React Native creates a new VDOM tree, and compared it with previous VDOM tree to identify changes.
+// So according to difference, React only update that part of the Real DOM which needed.
+
+
+// Hooks are build-in functions, which allow functional components to deal with its state and other life-cycle features & it introduced in React Version-16.8.
+
+
+// "NetInfo" is a module in React Native that provides information about the device network connectivity which allows to monitor the network state, detect changes in connection status and respond accordingly.
+
+
+// "BackHandler" is a module in React Native used to handle the Android's hardware back button events. It provide methods to register event listeners and allow us to define custom behaviour when hardware back button pressed.
+
+
+// "Hot Reloading" allow developers to see changes which are made to their code in real-time, without any manual refresh the app. It automatically reloads only the modified code, preserving the state of the app.
+
+
+// "Live Reloading" allow developers to see changes which are made to their code in real-time, without any manual refresh the app. It reloads the entire app, discarding the current state. This means that if developer has made changes that affect the state of the app, they will not be preserved.
+
+
+// "Code signing" is a security practices during app deployment to ensure authenticity & integrity of an application.
+// In React Native, we are building an app for distribution(iOS and Android) which is digitally signed using cryptographic signatures and linking it with the developer's developer account for authenticity purposes which ensures any unauthorized modifications in it's code & confirms app comes from trusted source.
+
+
+// Typescript is syntactic superset of javascript which includes static typing feature.
+// Static Typing means that the type of variable is known at compile time instead of runtime. So once a variable is declared to be a certain type in statically typed language, it cannot be redeclare to be a different type later.
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// PanResponder is a module in React Native used to handle touch gestures and user interactions like dragging, swiping and pinch-to-zoom by creating a custom touch responders.
+
+
+// SQLite is a free, open source & relational database management system(RDBMS) that's used to store structured data in a database file, which is ideal for small-scale application and local storage.
+
+
 import React, { useEffect, useState, useCallback, useMemo, createContext } from 'react'
 import { View, Text, StyleSheet, Platform, StatusBar, ImageBackground, SafeAreaView, Modal, Button, Keyboard, PixelRatio, Alert, BackHandler, ScrollView, RefreshControl, useColorScheme } from 'react-native'
 import NetInfo from "@react-native-community/netinfo"
@@ -56,6 +138,8 @@ import POST_API from './components/POST_API'
 import PUT_API from './components/PUT_API'
 import PATCH_API from './components/PATCH_API'
 import DELETE_API from './components/DELETE_API'
+import KatalystWebsite from './components/KatalystWebsite'
+import MyHOC from './components/MyHOC'
 
 export const SampleContext = createContext();
 
@@ -120,135 +204,139 @@ const App = () => {
   }
 
   return (
-    <SampleContext.Provider value={{helloFromApp}} >
-    <View
-      // scrollEnabled={true} // false: by default its true
-      style={{ flex: 1, backgroundColor: darktheme ? "#000000" : "#eeebf0" }}
-    >
-      <StatusBar
-        backgroundColor={darktheme ? "#474745" : "#193803"}
-      // barStyle={"dark-content"}
-      // hidden={false}
-      />
-
-      <Modal
-        transparent={true}
-        visible={show}
+    <SampleContext.Provider value={{ helloFromApp }} >
+      <View
+        // scrollEnabled={true} // false: by default its true
+        style={{ flex: 1, backgroundColor: darktheme ? "#000000" : "#eeebf0" }}
       >
-        <View style={{ width: "100%", height: 20, backgroundColor: internetCon ? "green" : "red", position: "absolute", bottom: 0 }}>
-          <Text style={{ textAlign: "center", color: "#fff", fontWeight: 500 }}>{internetCon ? "Back online" : "No connection"}</Text>
-        </View>
-      </Modal>
+        <StatusBar
+          backgroundColor={darktheme ? "#474745" : "#193803"}
+        // barStyle={"dark-content"}
+        // hidden={false}
+        />
 
-      {/* <ImageBackground 
+        <Modal
+          transparent={true}
+          visible={show}
+        >
+          <View style={{ width: "100%", height: 20, backgroundColor: internetCon ? "green" : "red", position: "absolute", bottom: 0 }}>
+            <Text style={{ textAlign: "center", color: "#fff", fontWeight: 500 }}>{internetCon ? "Back online" : "No connection"}</Text>
+          </View>
+        </Modal>
+
+        {/* <ImageBackground 
         style={externalStyle.image}
         source={{uri: "https://legacy.reactjs.org/logo-og.png"}}
       /> */}
 
-      {/* <Text style={{ ...externalStyle.heading, fontWeight: scale(500), color: darktheme ? "#fff" : "green" }}>
+        {/* <Text style={{ ...externalStyle.heading, fontWeight: scale(500), color: darktheme ? "#fff" : "green" }}>
         Welcome to React Native
       </Text> */}
 
-      <MyView />
+        {/* <MyView /> */}
 
-      {/* <Images /> */}
+        {/* <Images /> */}
 
-      {/* <PlatformSpecificButton /> */}
+        {/* <PlatformSpecificButton /> */}
 
-      {/* <Alerts /> */}
+        {/* <Alerts /> */}
 
-      {/* <Animation /> */}
+        {/* <Animation /> */}
 
-      {/* <CustomPermissions /> */}
+        {/* <CustomPermissions /> */}
 
-      {/* <Keyyboard /> */}
+        {/* <Keyyboard /> */}
 
-      {/* <MyLinking /> */}
+        {/* <MyLinking /> */}
 
-      {/* <MyModal /> */}
+        {/* <MyModal /> */}
 
-      {/* <PixelComp /> */}
+        {/* <PixelComp /> */}
 
-      {/* <Toast /> */}
+        {/* <Toast /> */}
 
-      {/* <Touchables /> */}
+        {/* <Touchables /> */}
 
-      {/* <Transforms /> */}
+        {/* <Transforms /> */}
 
-      {/* <User name="Shahbaz" age="34" /> */}
+        {/* <User name="Shahbaz" age="34" /> */}
 
-      {/* <MyFlexBox /> */}
+        {/* <MyFlexBox /> */}
 
-      {/* <MyFlatList /> */}
+        {/* <MyFlatList /> */}
 
-      {/* <ImageStyleProps /> */}
+        {/* <ImageStyleProps /> */}
 
-      {/* <DynamicTheming /> */}
+        {/* <DynamicTheming /> */}
 
-      {/* <MyApiCall /> */}
+        {/* <MyApiCall /> */}
 
-      {/* <MyAxios /> */}
+        {/* <MyAxios /> */}
 
-      {/* <POST_API /> */}
+        {/* <POST_API /> */}
 
-      {/* <PUT_API /> */}
+        {/* <PUT_API /> */}
 
-      {/* <PATCH_API /> */}
+        {/* <PATCH_API /> */}
 
-      {/* <DELETE_API /> */}
+        {/* <DELETE_API /> */}
 
-      {/* <MyShadowBox /> */}
+        {/* <MyShadowBox /> */}
 
-      {/* <MyUseRef /> */}
+        <MyUseRef />
 
-      {/* <MyForwardRef /> */}
+        {/* <MyForwardRef /> */}
 
-      {/* <Parent /> */}
+        {/* <Parent /> */}
 
-      {/* <Provider store={store}>
+        {/* <Provider store={store}>
         <ReduxCounter />
       </Provider> */}
 
-      {/* <TickWithInterval /> */}
+        {/* <TickWithInterval /> */}
 
-      {/* <MySwitch data={darktheme} updateTheme={updateTheme} /> */}
+        {/* <MySwitch data={darktheme} updateTheme={updateTheme} /> */}
 
-      {/* <MyAsyncStorage /> */}
+        {/* <MyAsyncStorage /> */}
 
-      {/* <MyEncryptedStorage /> */}
+        {/* <MyEncryptedStorage /> */}
 
-      {/* <FunctionalComponent /> */}
+        {/* <FunctionalComponent /> */}
 
-      {/* <ClassComponent /> */}
+        {/* <ClassComponent /> */}
 
-      {/* <MyUseState /> */}
+        {/* <MyHOC /> */}
 
-      {/* <MyUseEffect /> */}
+        {/* <MyUseState /> */}
 
-      {/* <MyComponentDidMount /> */}
+        {/* <MyUseEffect /> */}
 
-      {/* <MyComponentDidUpdate /> */}
+        {/* <MyComponentDidMount /> */}
 
-      {/* <MyComponentWillUnmount /> */}
+        {/* <MyComponentDidUpdate /> */}
 
-      {/* <MyUseMemo /> */}
+        {/* <MyComponentWillUnmount /> */}
 
-      {/* <MyUseCallBack /> */}
+        {/* <MyUseMemo /> */}
 
-      {/* <MyShouldComponentUpdate /> */}
+        {/* <MyUseCallBack /> */}
 
-      {/* <MyPureComponent /> */}
+        {/* <MyShouldComponentUpdate /> */}
 
-      {/* <MyLogin /> */}
+        {/* <MyPureComponent /> */}
 
-      {/* <MyRegister /> */}
+        {/* <MyLogin /> */}
 
-      {/* <MyForgotPassword /> */}
+        {/* <MyRegister /> */}
 
-      {/* <MyContact /> */}
+        {/* <MyForgotPassword /> */}
 
-      {/* <MyPushNotifications /> */}
-    </View>
+        {/* <MyContact /> */}
+
+        {/* <MyPushNotifications /> */}
+
+        {/* <KatalystWebsite /> */}
+      </View>
     </SampleContext.Provider>
   )
 }

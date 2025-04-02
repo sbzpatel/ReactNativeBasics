@@ -1,3 +1,6 @@
+// EncryptedStorage is an encrypted, asynchronous, persists & key-value storage system which is global to the app.
+
+
 import { View, Text, TextInput, TouchableOpacity, Alert, ToastAndroid } from 'react-native'
 import React, { useState } from 'react'
 import externalStyle from './externalStyle'

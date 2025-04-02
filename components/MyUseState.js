@@ -1,3 +1,7 @@
+// useState is a React Hook which is used to store and manage the functional component's state, enabling dynamic updates and re-renders when the state changes.
+// useState returns a stateful value, and it has a setter function to update its value.
+
+
 import { Text, TouchableOpacity, View } from 'react-native'
 import React, { Component, useState } from 'react'
 import externalStyle from './externalStyle';

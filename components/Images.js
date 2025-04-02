@@ -1,3 +1,5 @@
+// React Native Image module used to render the image on mobile's screen by passing its online uri.
+
 import React from 'react'
 import { View, Text, Image } from 'react-native'
 import externalStyle from './externalStyle'
