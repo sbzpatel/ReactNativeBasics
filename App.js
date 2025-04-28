@@ -107,7 +107,7 @@ import MyShadowBox from './components/MyShadowBox'
 import MyUseRef from './components/MyUseRef'
 import Parent from './components/contextAPI/Parent'
 import { Provider } from 'react-redux'
-import store from './components/redux/store/store'
+import store from './components/reduxToolkit/store/store'
 import ReduxCounter from './components/ReduxCounter'
 import MyLogin from './components/MyLogin'
 import TickWithInterval from './components/TickWithInterval'
@@ -283,15 +283,15 @@ const App = () => {
 
         {/* <MyShadowBox /> */}
 
-        <MyUseRef />
+        {/* <MyUseRef /> */}
 
         {/* <MyForwardRef /> */}
 
         {/* <Parent /> */}
 
-        {/* <Provider store={store}>
-        <ReduxCounter />
-      </Provider> */}
+        <Provider store={store}>
+          <ReduxCounter />
+        </Provider>
 
         {/* <TickWithInterval /> */}
 

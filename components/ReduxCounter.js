@@ -10,7 +10,7 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { decrement, increment, reset } from './redux/slice/counterSlice';
+import { decrement, increment, reset } from './reduxToolkit/slice/counterSlice';
 import externalStyle from './externalStyle';
 
 const ReduxCounter = () => {
